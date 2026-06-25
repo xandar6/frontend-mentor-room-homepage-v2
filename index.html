@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Room homepage</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="room-home">
+      <section class="hero-media" aria-label="Featured room">
+        <picture class="panel-picture">
+          <source
+            media="(max-width: 47.9375rem)"
+            srcset="images/mobile-image-hero-1.jpg"
+          />
+          <img
+            class="panel-image"
+            src="images/desktop-image-hero-1.jpg"
+            alt=""
+          />
+        </picture>
+        <div class="slider-controls" role="group" aria-label="Slide controls">
+          <button
+            class="slider-controls__button slider-controls__button--previous"
+            type="button"
+            aria-label="Previous slide"
+          >
+            <img src="images/icon-angle-left.svg" alt="" />
+          </button>
+          <button
+            class="slider-controls__button slider-controls__button--next"
+            type="button"
+            aria-label="Next slide"
+          >
+            <img src="images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </section>
+
+      <section class="hero-content" aria-labelledby="hero-title">
+        <h1 class="hero-title" id="hero-title">
+          Discover innovative ways to decorate
+        </h1>
+        <p class="content-copy">
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <a href="#" class="cta-link">
+          <span>shop now</span>
+          <img src="images/icon-arrow.svg" alt="" />
+        </a>
+      </section>
+
+      <div class="about-media about-media--dark">
+        <img class="panel-image" src="images/image-about-dark.jpg" alt="" />
+      </div>
+
+      <section class="about-content" aria-labelledby="about-title">
+        <h2 class="about-title" id="about-title">About our furniture</h2>
+        <p class="content-copy">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </section>
+
+      <div class="about-media about-media--light">
+        <img class="panel-image" src="images/image-about-light.jpg" alt="" />
+      </div>
+    </main>
+  </body>
+</html>

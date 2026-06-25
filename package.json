@@ -1,0 +1,14 @@
+{
+  "name": "frontend-challenge-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A lightweight Sass starter for Frontend Mentor challenges.",
+  "scripts": {
+    "sass": "sass scss/style.scss css/style.css --style=expanded --no-source-map",
+    "sass:watch": "sass --watch scss/style.scss:css/style.css --style=expanded --no-source-map",
+    "sass:build": "sass scss/style.scss css/style.css --style=compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
