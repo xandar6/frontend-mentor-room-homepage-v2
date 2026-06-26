@@ -38,6 +38,7 @@
     4.5vw,
     #{utilities.rem(72)}
   );
+  --about-row-min-height: 0px;
 }
 
 .room-home {
@@ -47,7 +48,9 @@
   grid-template-columns:
     29.1667% 29.1667% var(--slider-controls-width)
     1fr;
-  grid-template-rows: minmax(0, 66.875vh) minmax(0, 33.125vh);
+  grid-template-rows:
+    minmax(0, 66.875vh)
+    minmax(var(--about-row-min-height), 33.125vh);
 }
 
 .hero-media {
@@ -189,6 +192,12 @@
 .about-media--light {
   grid-column: 4 / 5;
   grid-row: 2;
+}
+
+@media (min-width: 48rem) and (max-height: 43.75rem) {
+  :root {
+    --about-row-min-height: #{utilities.rem(300)};
+  }
 }
 
 @media (max-width: 47.9375rem) {

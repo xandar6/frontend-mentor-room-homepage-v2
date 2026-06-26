@@ -239,13 +239,14 @@ button {
     4.5vw,
     4.5rem
   );
+  --about-row-min-height: 0px;
 }
 
 .room-home {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 29.1667% 29.1667% var(--slider-controls-width) 1fr;
-  grid-template-rows: minmax(0, 66.875vh) minmax(0, 33.125vh);
+  grid-template-rows: minmax(0, 66.875vh) minmax(var(--about-row-min-height), 33.125vh);
 }
 
 .hero-media {
@@ -374,6 +375,11 @@ button {
   grid-row: 2;
 }
 
+@media (min-width: 48rem) and (max-height: 43.75rem) {
+  :root {
+    --about-row-min-height: 18.75rem;
+  }
+}
 @media (max-width: 47.9375rem) {
   :root {
     --slider-controls-width: 7rem;
