@@ -10,6 +10,30 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
+    <div class="overlay" aria-hidden="true"></div>
+    <header class="room-header">
+      <button
+        class="btn-open-menu"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+      >
+        <img src="images/icon-hamburger.svg" alt="" />
+      </button>
+      <img src="images/logo.svg" alt="room" class="logo" />
+      <nav class="primary-nav" id="primary-nav">
+        <button class="btn-close-menu" type="button" aria-label="Close menu">
+          <img src="images/icon-close.svg" alt="" />
+        </button>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#Home">Home</a></li>
+          <li><a class="nav-link" href="#Shop">Shop</a></li>
+          <li><a class="nav-link" href="#About">About</a></li>
+          <li><a class="nav-link" href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="room-home">
       <section class="hero-media" aria-label="Featured room">
         <picture class="panel-picture">

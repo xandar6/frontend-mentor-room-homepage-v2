@@ -1,4 +1,10 @@
+@use "../utilities/utilities";
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+$breakpoint-desktop: 48rem;
+$breakpoint-header-mobile: 47.9375rem;
+$breakpoint-layout-mobile: 57rem;
+$breakpoint-short-desktop: 43.75rem;
 
 :root {
   /* Colors */
@@ -34,10 +40,65 @@
   --container-max: 69.375rem;
   --container-padding: 1rem;
   --section-padding: clamp(2rem, 6vw, 5rem);
+  --slider-controls-width: clamp(
+    #{utilities.rem(112)},
+    11.111vw,
+    #{utilities.rem(160)}
+  );
+  --content-font-size: clamp(
+    #{utilities.rem(16)},
+    1.05vw,
+    #{utilities.rem(24)}
+  );
+  --hero-title-size: clamp(#{utilities.rem(36)}, 3vw, #{utilities.rem(60)});
+  --hero-padding-block-start: clamp(
+    #{utilities.rem(32)},
+    4vw,
+    #{utilities.rem(96)}
+  );
+  --hero-padding-inline: clamp(
+    #{utilities.rem(48)},
+    6vw,
+    #{utilities.rem(148)}
+  );
+  --hero-padding-block-end: clamp(
+    #{utilities.rem(80)},
+    8vw,
+    #{utilities.rem(180)}
+  );
+  --about-padding-block: clamp(
+    #{utilities.rem(40)},
+    4vw,
+    #{utilities.rem(64)}
+  );
+  --about-padding-inline: clamp(
+    #{utilities.rem(48)},
+    4.5vw,
+    #{utilities.rem(72)}
+  );
+  --about-row-min-height: 0px;
 
   /* Decorative */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
   --shadow-sm: 0 0.25rem 0.75rem hsl(0 0% 0% / 0.08);
+}
+
+@media (min-width: $breakpoint-desktop) and (max-height: $breakpoint-short-desktop) {
+  :root {
+    --about-row-min-height: #{utilities.rem(300)};
+  }
+}
+
+@media (max-width: $breakpoint-layout-mobile) {
+  :root {
+    --slider-controls-width: #{utilities.rem(112)};
+    --content-font-size: clamp(
+      #{utilities.rem(15)},
+      4.2vw,
+      #{utilities.rem(16)}
+    );
+    --hero-title-size: clamp(#{utilities.rem(36)}, 10vw, #{utilities.rem(42)});
+  }
 }
